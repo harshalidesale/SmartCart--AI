@@ -160,16 +160,3 @@ fullstack-ecommerce/
 ├── frontend/        # React application
 ├── docker-compose.yml
 └── README.md
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for features, fixes, or improvements.
-
-1. Fork this repo
-2. Create your branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -am 'Add a new feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Create a new Pull Request
