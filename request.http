@@ -1,0 +1,127 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+### GET request to findAll Product
+GET http://18.222.63.154:8082/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhMzgiLCJpYXQiOjE3NTU5ODE1OTUsImV4cCI6MTc1NTk4NTE5NX0.XuAlwMec-Hfk_qKZ1kAQr8OI36Q3zMYzDOJ00JJnw-A
+
+###
+
+POST http://18.222.63.154:8082/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhMzgiLCJpYXQiOjE3NTU5ODE1OTUsImV4cCI6MTc1NTk4NTE5NX0.XuAlwMec-Hfk_qKZ1kAQr8OI36Q3zMYzDOJ00JJnw-A
+Content-Type: application/json
+
+{
+  "name": "ASUS VivoBook 15 White",
+  "description": "Experience performance and style with the ASUS VivoBook 15 in White. Featuring a vibrant Full HD display, Intel Core processor, and ultra-fast SSD storage, this laptop is built for productivity, creativity, and entertainment. The slim, lightweight design with a sleek white finish makes it perfect for both work and travel. Enjoy powerful performance in a modern design that stands out wherever you go.",
+  "price": 749.99,
+  "imageUrl": "/assets/asus_laptop_white.webp",
+  "category": "laptops",
+  "quantity": 15
+}
+
+
+
+
+
+
+
+
+
+###
+
+GET http://localhost:8082/api/v1/products/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoMjM0NTEiLCJpYXQiOjE3NDk3NTEyNDAsImV4cCI6MTc0OTc1NDg0MH0.rL48VTiir0p5RDtBL0Y2gZwc850Prn_Lv1o6-2wUA3s
+
+
+###
+PUT http://localhost:8082/api/v1/products/2
+Content-Type: application/json
+
+{
+  "name": "pizzaaa",
+  "description": "Now with RGB lighting",
+  "price": 24.99,
+  "imageUrl": "https://via.placeholder.com/150",
+  "category": "electronics",
+  "quantity": 8
+}
+
+###
+DELETE http://18.222.63.154:8082/api/v1/products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhMzgiLCJpYXQiOjE3NTU5ODE1OTUsImV4cCI6MTc1NTk4NTE5NX0.XuAlwMec-Hfk_qKZ1kAQr8OI36Q3zMYzDOJ00JJnw-A
+
+
+### User
+
+## Register
+
+POST http://localhost:8082//api/v1/auth/register
+Content-Type: application/json
+
+
+{
+  "username": "a38",
+  "email": "bade22@gmail.com",
+  "password": "123@patLe"
+}
+
+
+
+###Login
+
+POST http://18.222.63.154:8082//api/v1/auth/login
+Content-Type: application/json
+
+{
+"identifier": "a38",
+"password": "123@patLe"
+}
+
+###Cart
+GET http://localhost:8082/api/v1/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsaXBpNDUiLCJpYXQiOjE3NTA4NzM2OTgsImV4cCI6MTc1MDg3NzI5OH0.P-OZS-DpLV4H72GObgI30W1KvrkH9oKxpH46RbneXIU
+
+
+### Add item to cartqa
+POST http://localhost:8082/api/v1/cart/add
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsaXBpNDUiLCJpYXQiOjE3NTA3MTEzNTMsImV4cCI6MTc1MDcxNDk1M30.WEKgfuVcihDagtAJNTBuZli0JF76of42P9dPOzk8iAE
+Content-Type: application/json
+
+{
+  "productId": 21,
+  "quantity": 9
+}
+
+
+### Delete item from cart
+DELETE http://localhost:8082/api/v1/cart/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoMjM0NTEiLCJpYXQiOjE3NDg5NzIzODgsImV4cCI6MTc0ODk3NTk4OH0.0nFR0FhoLp_ZZ5TE3dsdEHblqooGGkiO4bOzk495tGQ
+
+### Patch Qty from cart
+PATCH http://localhost:8082/api/v1/cart/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsaXBpNDUiLCJpYXQiOjE3NTA4NzM2OTgsImV4cCI6MTc1MDg3NzI5OH0.P-OZS-DpLV4H72GObgI30W1KvrkH9oKxpH46RbneXIU
+Content-Type: application/json
+
+{
+  "quantity": 7
+}
+
+### Test /upload-image
+POST http://localhost:5000/api/v1/upload_image
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="image"; filename="nike_shoe_white.jpg"
+Content-Type: image/jpeg
+
+< ./frontend/public/assets/nike_shoe_white.jpg
+--boundary--
+
+
+
+
+
