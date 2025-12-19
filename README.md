@@ -173,9 +173,3 @@ Contributions are welcome! Please open issues or submit pull requests for featur
 3. Commit your changes (`git commit -am 'Add a new feature'`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Create a new Pull Request
-
----
-
-## 📬 Contact
-
-For any questions or support, open an issue or contact [herinp45](https://github.com/herinp45).
